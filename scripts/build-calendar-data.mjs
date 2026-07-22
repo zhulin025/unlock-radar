@@ -35,10 +35,14 @@ async function monthRows(year, month) {
 const now = new Date();
 const startYear = Number(process.env.DATA_START_YEAR || now.getUTCFullYear() - 3);
 const endYear = Number(process.env.DATA_END_YEAR || now.getUTCFullYear() + 2);
-const companies = new Map(source.companies.map((item) => [item.id, item]));
-const events = new Map(source.events.map((item) => [item.id, item]));
+let cached = { companies: [], events: [] };
+if (process.env.SKIP_CN_FETCH === "1") {
+  try { cached = JSON.parse(await readFile(output, "utf8")); } catch { /* A first build must fetch CN data. */ }
+}
+const companies = new Map([...cached.companies.filter((item) => item.market === "CN"), ...source.companies].map((item) => [item.id, item]));
+const events = new Map([...cached.events.filter((item) => item.companyId.startsWith("cn-")), ...source.events].map((item) => [item.id, item]));
 
-for (let year = startYear; year <= endYear; year += 1) {
+for (let year = startYear; process.env.SKIP_CN_FETCH !== "1" && year <= endYear; year += 1) {
   for (let month = 1; month <= 12; month += 1) {
     const rows = await monthRows(year, month);
     for (const row of rows) {

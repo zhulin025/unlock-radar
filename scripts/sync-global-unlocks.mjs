@@ -19,12 +19,15 @@ async function get(url, headers = {}) { const response = await fetch(url, { head
 async function syncSec(from, to) {
   const companies = [];
   const events = [];
-  for (let cursor = new Date(from); cursor <= to; cursor = addDays(ymd(cursor), 1)) {
-    const quarter = Math.floor(cursor.getUTCMonth() / 3) + 1;
-    const indexUrl = `https://www.sec.gov/Archives/edgar/daily-index/${cursor.getUTCFullYear()}/QTR${quarter}/master.${compact(cursor)}.idx`;
+  const quarters = [];
+  for (let cursor = new Date(Date.UTC(from.getUTCFullYear(), Math.floor(from.getUTCMonth() / 3) * 3, 1)); cursor <= to; cursor = addMonths(ymd(cursor), 3)) {
+    quarters.push([cursor.getUTCFullYear(), Math.floor(cursor.getUTCMonth() / 3) + 1]);
+  }
+  for (const [year, quarter] of quarters) {
+    const indexUrl = `https://www.sec.gov/Archives/edgar/full-index/${year}/QTR${quarter}/master.idx`;
     let indexText;
     try { indexText = await (await get(indexUrl)).text(); } catch { continue; }
-    const filings = indexText.split("\n").map((line) => line.trim().split("|")).filter((parts) => parts.length === 5 && parts[2] === "424B4");
+    const filings = indexText.split("\n").map((line) => line.trim().split("|")).filter((parts) => parts.length === 5 && parts[2] === "424B4" && parts[3] >= ymd(from) && parts[3] <= ymd(to));
     for (const [cik, companyName, , filedDate, fileName] of filings) {
       try {
         const accession = fileName.split("/").at(-1).replace(".txt", "");
@@ -45,7 +48,7 @@ async function syncSec(from, to) {
         const periodDays = Number(eligible?.[1] || lockup?.[1]);
         const shares = number(eligible?.[2] || lockedShares?.[1] || 0);
         if (!periodDays || !shares) continue;
-        const filed = `${filedDate.slice(0, 4)}-${filedDate.slice(4, 6)}-${filedDate.slice(6, 8)}`;
+        const filed = filedDate.includes("-") ? filedDate : `${filedDate.slice(0, 4)}-${filedDate.slice(4, 6)}-${filedDate.slice(6, 8)}`;
         const prospectusTextDate = text.slice(0, 18000).match(/prospectus dated\s+([A-Z][a-z]+\s+\d{1,2},\s+\d{4})/i)?.[1];
         const baseDate = prospectusTextDate ? ymd(new Date(`${prospectusTextDate} UTC`)) : filed;
         const eventDate = ymd(nextWeekday(ymd(addDays(baseDate, periodDays))));
@@ -64,11 +67,11 @@ async function pdfText(url) { const bytes = new Uint8Array(await (await get(url,
 async function syncHkex(from, to) {
   const companies = [];
   const events = [];
-  for (let cursor = new Date(from); cursor <= to; cursor = addDays(ymd(cursor), 31)) {
-    const chunkEnd = new Date(Math.min(to.getTime(), addDays(ymd(cursor), 30).getTime()));
+  for (let cursor = new Date(from); cursor <= to; cursor = addDays(ymd(cursor), 7)) {
+    const chunkEnd = new Date(Math.min(to.getTime(), addDays(ymd(cursor), 6).getTime()));
     const params = new URLSearchParams({ sortDir: "0", sortByOptions: "DateTime", category: "0", market: "SEHK", stockId: "-1", documentType: "-1", fromDate: compact(cursor), toDate: compact(chunkEnd), title: "", searchType: "0", t1code: "-2", t2Gcode: "-2", t2code: "-2", rowRange: "5000", lang: "EN" });
     let rows;
-    try { const payload = await (await get(`https://www1.hkexnews.hk/search/titleSearchServlet.do?${params}`, { Referer: "https://www1.hkexnews.hk/search/titlesearch.xhtml", "X-Requested-With": "XMLHttpRequest" })).json(); rows = typeof payload.result === "string" ? JSON.parse(payload.result) : payload.result || []; } catch { continue; }
+    try { const payload = await (await get(`https://www1.hkexnews.hk/search/titleSearchServlet.do?${params}`, { Referer: "https://www1.hkexnews.hk/search/titlesearch.xhtml", "X-Requested-With": "XMLHttpRequest" })).json(); rows = typeof payload.result === "string" ? JSON.parse(payload.result) : payload.result; if (!Array.isArray(rows)) rows = []; } catch { continue; }
     const candidates = rows.filter((row) => /allotment results|results of allocations|lock-up undertaking|lock-up period/i.test(`${row.TITLE} ${row.SHORT_TEXT}`));
     for (const row of candidates) {
       const sourceUrl = row.FILE_LINK.startsWith("http") ? row.FILE_LINK : `https://www1.hkexnews.hk${row.FILE_LINK}`;
