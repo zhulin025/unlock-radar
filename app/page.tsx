@@ -42,7 +42,11 @@ const marketMeta: Record<Market, { label: string; className: string }> = {
 };
 
 const weekday = ["周一", "周二", "周三", "周四", "周五"];
+const marketWeekday = ["周日", "周一", "周二", "周三", "周四", "周五", "周六"];
 const storageKey = "unlock-calendar:favorites:v1";
+
+type MarketEventKind = "risk" | "macro" | "watch" | "earnings" | "holiday";
+type MarketEvent = { id: string; date: string; marketDate?: string; time?: string; title: string; kind: MarketEventKind; tickers?: string; companyName?: string; fiscalQuarter?: string; epsForecast?: string | null; marketCap?: string | null; detail?: string; status: string; source: string; sourceUrl: string; verifiedAt: string };
 
 function isoDate(date: Date) {
   const y = date.getFullYear();
@@ -66,6 +70,10 @@ export default function Home() {
   const [fetchedAt, setFetchedAt] = useState("");
   const [historyEvents, setHistoryEvents] = useState<UnlockEvent[]>([]);
   const [historyLoading, setHistoryLoading] = useState(false);
+  const [selectedMarketEvent, setSelectedMarketEvent] = useState<MarketEvent | null>(null);
+  const [marketEvents, setMarketEvents] = useState<MarketEvent[]>([]);
+  const [marketGeneratedAt, setMarketGeneratedAt] = useState("");
+  const [marketDataState, setMarketDataState] = useState<"loading" | "live" | "error">("loading");
 
   const companyOf = (event: UnlockEvent) => companies.find((company) => company.id === event.companyId)!;
 
@@ -89,6 +97,18 @@ export default function Home() {
       });
     return () => controller.abort();
   }, [month]);
+
+  useEffect(() => {
+    const controller = new AbortController();
+    fetch(`${import.meta.env.BASE_URL}data/market-calendar.json`, { signal:controller.signal })
+      .then(async (response) => {
+        if (!response.ok) throw new Error("市场日历数据暂时不可用");
+        return response.json() as Promise<{ events:MarketEvent[]; generatedAt:string }>;
+      })
+      .then((payload) => { setMarketEvents(payload.events); setMarketGeneratedAt(payload.generatedAt); setMarketDataState("live"); })
+      .catch((error) => { if (!(error instanceof DOMException && error.name === "AbortError")) setMarketDataState("error"); });
+    return () => controller.abort();
+  }, []);
 
   useEffect(() => {
     if (!selectedEvent) {
@@ -170,6 +190,13 @@ export default function Home() {
     date.setDate(gridStart.getDate() + index);
     return date;
   }).filter((date) => date.getDay() !== 0 && date.getDay() !== 6);
+  const marketGridStart = new Date(first);
+  marketGridStart.setDate(first.getDate() - first.getDay());
+  const marketDays = Array.from({ length: 42 }, (_, index) => {
+    const date = new Date(marketGridStart);
+    date.setDate(marketGridStart.getDate() + index);
+    return date;
+  });
 
   const toggleFavorite = (id: string) => setFavorites((current) => current.includes(id) ? current.filter((item) => item !== id) : [...current, id]);
   const nextEvent = (companyId: string) => events.filter((event) => event.companyId === companyId && event.date >= todayIso).sort((a, b) => a.date.localeCompare(b.date))[0];
@@ -183,7 +210,7 @@ export default function Home() {
           <span className="brand-mark">解</span>
           <span><strong>解禁雷达</strong><small>Unlock Radar</small></span>
         </a>
-        <nav><a className="active" href="#calendar">解禁日历</a><a href="#favorites">我的收藏</a><a href="#methodology">数据说明</a></nav>
+        <nav><a className="active" href="#calendar">解禁日历</a><a href="#market-calendar">市场日历</a><a href="#favorites">我的收藏</a><a href="#methodology">数据说明</a></nav>
         <div className="header-meta"><span className={`live-dot ${dataState}`} /> {dataState === "loading" ? "正在同步真实数据" : dataState === "error" ? "数据源暂时不可用" : `实时数据 · ${fetchedAt.slice(5, 16).replace("T", " ")}`} <button aria-label="帮助">?</button></div>
       </header>
 
@@ -274,6 +301,32 @@ export default function Home() {
         <div className="calendar-footnote"><span>ℹ</span> A 股解禁记录实时取自公开数据接口；港股与美股仅展示已完成官方披露解析的事件。解禁不等于实际减持。</div>
       </section>
 
+      <section className="calendar-section market-calendar-section" id="market-calendar">
+        <div className="market-calendar-head">
+          <div><span className="section-kicker">MARKET CATALYSTS · {marketDataState === "live" ? "自动数据" : marketDataState === "loading" ? "同步中" : "同步异常"}</span><h2>宏观 + 重点科技股财报日历</h2><p>数据来自 Nasdaq、美联储与 BEA，统一换算为北京时间；最近更新 {marketGeneratedAt ? marketGeneratedAt.slice(0,16).replace("T"," ") : "—"}。</p></div>
+          <div className="legend market-legend"><span><i className="dot risk" />高风险</span><span><i className="dot macro" />宏观</span><span><i className="dot watch" />关注</span><span><i className="dot earnings" />重点财报</span><span><i className="dot holiday" />休市</span></div>
+        </div>
+        <div className="calendar-shell market-calendar-shell">
+          <div className="weekdays market-weekdays">{marketWeekday.map((day) => <div key={day}>{day}</div>)}</div>
+          <div className="calendar-grid market-grid">
+            {marketDays.map((date) => {
+              const key = isoDate(date);
+              const dayEvents = marketEvents.filter((event) => event.date === key);
+              const outside = date.getMonth() !== month.getMonth();
+              const today = key === todayIso;
+              return <div className={`day market-day ${outside ? "outside" : ""} ${today ? "is-today" : ""}`} key={`market-${key}`}>
+                <div className="day-number"><span>{date.getDate()}</span>{today && <b>今天</b>}</div>
+                <div className="day-events">{dayEvents.map((event, index) => <button className={`market-event market-event-${event.kind}`} key={`${key}-${index}`} title={`查看 ${event.title} 详情与来源`} onClick={() => setSelectedMarketEvent(event)}>
+                  {event.time && <time>{event.time}</time>}<strong>{event.title}</strong>
+                </button>)}</div>
+              </div>;
+            })}
+          </div>
+        </div>
+        <div className="earnings-strip"><strong>重点财报 · 北京时间日期</strong><div>{marketEvents.filter((event) => event.kind === "earnings" && event.date.startsWith(`${month.getFullYear()}-${String(month.getMonth() + 1).padStart(2, "0")}`)).map((event) => <span key={`${event.date}-${event.title}`}><b>{event.date.slice(5).replace("-", "/")}</b>{event.tickers}</span>)}</div></div>
+        <div className="calendar-footnote"><span>ℹ</span> 由每日自动脚本生成；只展示成功解析并保留来源链接的记录。Nasdaq 财报日历属于聚合数据，发布日期可能调整，交易前请再次核对公司公告。</div>
+      </section>
+
       <section className="methodology" id="methodology">
         <div><span className="section-kicker">METHODOLOGY</span><h2>一眼看懂数据可信度</h2></div>
         <div className="method-grid"><article><b>01</b><h3>原始文件优先</h3><p>优先追溯至交易所公告、HKEXnews 或 SEC filing，而不是匿名聚合数据。</p></article><article><b>02</b><h3>状态明确分级</h3><p>公告确认、按条款推算和条件性事件始终分开显示，不把估算包装成事实。</p></article><article><b>03</b><h3>解禁不等于减持</h3><p>股份获得流通资格不代表股东一定卖出，页面不提供确定性的涨跌判断。</p></article></div>
@@ -302,6 +355,18 @@ export default function Home() {
             </section>
             <section className="source-card"><span>数据来源</span><strong>{selectedEvent.source}</strong><small>最后核验：{selectedEvent.verifiedAt}</small>{selectedEvent.sourceUrl && <a href={selectedEvent.sourceUrl} target="_blank" rel="noreferrer">查看来源页面 ↗</a>}</section>
             <p className="disclaimer">解禁仅代表股份取得流通资格，不代表相关股东必然减持。本页不构成投资建议。</p>
+          </aside>
+        </div>;
+      })()}
+      {selectedMarketEvent && (() => {
+        const kindLabel: Record<MarketEventKind, string> = { risk:"高风险宏观事件", macro:"宏观数据", watch:"市场关注", earnings:"重点科技股财报", holiday:"休市安排" };
+        return <div className="modal-backdrop market-modal-backdrop" onMouseDown={() => setSelectedMarketEvent(null)}>
+          <aside className="detail-panel market-detail-panel" onMouseDown={(event) => event.stopPropagation()} role="dialog" aria-modal="true" aria-label={`${selectedMarketEvent.title}详情`}>
+            <div className="detail-header"><span className={`market-detail-kind market-event-${selectedMarketEvent.kind}`}>{kindLabel[selectedMarketEvent.kind]}</span><button onClick={() => setSelectedMarketEvent(null)} aria-label="关闭">×</button></div>
+            <div className="market-detail-title"><p>{selectedMarketEvent.date.replaceAll("-", ".")} · 北京时间</p><h2>{selectedMarketEvent.title}</h2>{selectedMarketEvent.time && <strong>{selectedMarketEvent.time}</strong>}</div>
+            <section className="detail-section"><h3>事件说明</h3><p>{selectedMarketEvent.kind === "earnings" ? `${selectedMarketEvent.companyName || selectedMarketEvent.tickers} · ${selectedMarketEvent.fiscalQuarter || "财季待公布"}。EPS 市场预测：${selectedMarketEvent.epsForecast || "未提供"}，市值：${selectedMarketEvent.marketCap || "未提供"}。` : selectedMarketEvent.detail || "该事件可能影响市场对增长、通胀或货币政策路径的预期。页面时间统一换算为北京时间。"}</p></section>
+            <section className="market-source-card verified"><span>✓ 自动抓取记录</span><strong>{selectedMarketEvent.status}</strong><p>{selectedMarketEvent.source} · 核验于 {selectedMarketEvent.verifiedAt.slice(0,16).replace("T"," ")}</p><a href={selectedMarketEvent.sourceUrl} target="_blank" rel="noreferrer">打开来源页面 ↗</a></section>
+            <p className="disclaimer">本日历用于事件提醒，不构成投资建议。发布时间与财报日期可能临时变更，请在交易前再次核对官方来源。</p>
           </aside>
         </div>;
       })()}

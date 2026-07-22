@@ -34,6 +34,10 @@
 | [alpenmilch411/filings-fetcher](https://github.com/alpenmilch411/filings-fetcher) | SEC、HKEX 等一手披露文件获取 | 新且规模小；MIT | 多市场文件入口与本项目相符，但成熟度有限 | 用真实样本评估后再决定是否复用 |
 | [gerrymanoim/exchange_calendars](https://github.com/gerrymanoim/exchange_calendars) | 50+ 交易所的交易日和休市日，包括上交所、港交所、纽交所 | 活跃；Apache-2.0 | 非解禁数据，但可解决时区、休市和顺延计算 | 数据后端阶段直接复用，避免自行维护交易日表 |
 | [fullcalendar/fullcalendar](https://github.com/fullcalendar/fullcalendar) | 成熟的 JavaScript 日历组件 | 活跃；MIT | 偏会议事件与拖拽排期；金融月历单元格信息结构需大量改造 | 不引入；自研轻量月历网格，减少体积和样式冲突 |
+| [fullcalendar/fullcalendar-react](https://github.com/fullcalendar/fullcalendar-react) | FullCalendar 官方 React 适配器与月视图 | 活跃；MIT；2025-12 仍有版本发布 | React 技术栈匹配，但拖拽、排期与插件体系超过本页需求 | 不引入；继续复用现有轻量网格 |
+| [dayflow-js/calendar](https://github.com/dayflow-js/calendar) | React/Vue 等多框架月历、移动端和详情面板 | 活跃；MIT；2026-05 有版本发布 | 视觉和移动端能力较完整，但会替换现有事件模型 | 仅参考响应式与详情呈现，不复制代码 |
+| [Finnhub-Stock-API/finnhub-python](https://github.com/Finnhub-Stock-API/finnhub-python) | 财报日历与宏观经济日历 API 客户端 | 活跃；MIT | 数据类型高度匹配，但需要 API token，且第三方聚合日期需二次核验 | 作为未来自动同步候选；当前不绑定密钥 |
+| [EodHistoricalData/EODHD-openapi](https://github.com/EodHistoricalData/EODHD-openapi) | 财报、宏观事件及其他市场日历的 OpenAPI 定义 | 活跃；MIT | 接口覆盖完整，但属于商业数据 API，展示/再分发条款需确认 | 作为备用数据适配器，不直接复制数据 |
 
 ## 3. 实际复用方案
 
