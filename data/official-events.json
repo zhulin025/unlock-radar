@@ -623,6 +623,18 @@
       "description": "公司资料来自 HKEXnews 上市及配发文件。",
       "totalShares": "未披露",
       "floatShares": "未披露"
+    },
+    {
+      "id": "hk-09615",
+      "market": "HK",
+      "symbol": "09615",
+      "name": "MECH-MIND ROBOT",
+      "fullName": "MECH-MIND ROBOT",
+      "exchange": "香港联合交易所 · 主板",
+      "industry": "香港上市公司",
+      "description": "公司资料来自 HKEXnews 上市及配发文件。",
+      "totalShares": "未披露",
+      "floatShares": "未披露"
     }
   ],
   "events": [
@@ -1411,6 +1423,22 @@
       "verifiedAt": "2026-07-22 09:10"
     },
     {
+      "id": "hk-09615-2027-03-01-cornerstone",
+      "companyId": "hk-09615",
+      "date": "2027-03-01",
+      "shares": "1,435.13 万股",
+      "sharesValue": 14351310,
+      "percentTotal": 12.69,
+      "percentFloat": 0,
+      "estimatedValue": "未披露",
+      "type": "基石投资者锁定期届满",
+      "confidence": "已确认",
+      "holders": "基石投资者（以配发结果公告为准）",
+      "source": "HKEXnews · 锁定期最后一日 February 28, 2027",
+      "sourceUrl": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0831/2026083102433.pdf",
+      "verifiedAt": "2026-09-01 01:52"
+    },
+    {
       "id": "hk-06658-2027-03-15-cornerstone",
       "companyId": "hk-06658",
       "date": "2027-03-15",
@@ -1459,6 +1487,6 @@
       "verifiedAt": "2026-07-22 09:11"
     }
   ],
-  "generatedAt": "2026-08-29T04:11:46.864Z",
+  "generatedAt": "2026-09-01T01:52:29.377Z",
   "note": "Automated SEC/HKEX discovery with strict publish-only-when-parseable validation."
 }
