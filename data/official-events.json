@@ -1436,7 +1436,7 @@
       "holders": "基石投资者（以配发结果公告为准）",
       "source": "HKEXnews · 锁定期最后一日 February 28, 2027",
       "sourceUrl": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0831/2026083102433.pdf",
-      "verifiedAt": "2026-09-03 01:11"
+      "verifiedAt": "2026-09-04 01:06"
     },
     {
       "id": "hk-06658-2027-03-15-cornerstone",
@@ -1487,6 +1487,6 @@
       "verifiedAt": "2026-07-22 09:11"
     }
   ],
-  "generatedAt": "2026-09-03T01:11:53.183Z",
+  "generatedAt": "2026-09-04T01:06:17.828Z",
   "note": "Automated SEC/HKEX discovery with strict publish-only-when-parseable validation."
 }
