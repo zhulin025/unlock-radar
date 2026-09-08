@@ -635,6 +635,18 @@
       "description": "公司资料来自 HKEXnews 上市及配发文件。",
       "totalShares": "未披露",
       "floatShares": "未披露"
+    },
+    {
+      "id": "hk-09976",
+      "market": "HK",
+      "symbol": "09976",
+      "name": "LONGSYS",
+      "fullName": "LONGSYS",
+      "exchange": "香港联合交易所 · 主板",
+      "industry": "香港上市公司",
+      "description": "公司资料来自 HKEXnews 上市及配发文件。",
+      "totalShares": "未披露",
+      "floatShares": "未披露"
     }
   ],
   "events": [
@@ -1423,6 +1435,22 @@
       "verifiedAt": "2026-07-22 09:10"
     },
     {
+      "id": "hk-09976-2027-02-17-cornerstone",
+      "companyId": "hk-09976",
+      "date": "2027-02-17",
+      "shares": "66.46 万股",
+      "sharesValue": 664600,
+      "percentTotal": 0.14,
+      "percentFloat": 0,
+      "estimatedValue": "未披露",
+      "type": "基石投资者锁定期届满",
+      "confidence": "已确认",
+      "holders": "基石投资者（以配发结果公告为准）",
+      "source": "HKEXnews · 锁定期最后一日 February 16, 2027",
+      "sourceUrl": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0907/2026090701319.pdf",
+      "verifiedAt": "2026-09-08 01:14"
+    },
+    {
       "id": "hk-09615-2027-03-01-cornerstone",
       "companyId": "hk-09615",
       "date": "2027-03-01",
@@ -1487,6 +1515,6 @@
       "verifiedAt": "2026-07-22 09:11"
     }
   ],
-  "generatedAt": "2026-09-05T01:05:05.585Z",
+  "generatedAt": "2026-09-08T01:14:49.925Z",
   "note": "Automated SEC/HKEX discovery with strict publish-only-when-parseable validation."
 }
