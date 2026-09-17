@@ -1515,6 +1515,6 @@
       "verifiedAt": "2026-07-22 09:11"
     }
   ],
-  "generatedAt": "2026-09-16T01:29:10.733Z",
+  "generatedAt": "2026-09-17T01:31:18.889Z",
   "note": "Automated SEC/HKEX discovery with strict publish-only-when-parseable validation."
 }
