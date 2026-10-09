@@ -683,6 +683,18 @@
       "description": "公司资料来自 HKEXnews 上市及配发文件。",
       "totalShares": "未披露",
       "floatShares": "未披露"
+    },
+    {
+      "id": "hk-01256",
+      "market": "HK",
+      "symbol": "01256",
+      "name": "ESWIN COMPUTING",
+      "fullName": "ESWIN COMPUTING",
+      "exchange": "香港联合交易所 · 主板",
+      "industry": "香港上市公司",
+      "description": "公司资料来自 HKEXnews 上市及配发文件。",
+      "totalShares": "未披露",
+      "floatShares": "未披露"
     }
   ],
   "events": [
@@ -1567,6 +1579,22 @@
       "verifiedAt": "2026-10-03 02:06"
     },
     {
+      "id": "hk-01256-2027-04-09-cornerstone",
+      "companyId": "hk-01256",
+      "date": "2027-04-09",
+      "shares": "7.49 亿股",
+      "sharesValue": 749354000,
+      "percentTotal": 7.34,
+      "percentFloat": 0,
+      "estimatedValue": "未披露",
+      "type": "基石投资者锁定期届满",
+      "confidence": "已确认",
+      "holders": "基石投资者（以配发结果公告为准）",
+      "source": "HKEXnews · 锁定期最后一日 April 8, 2027",
+      "sourceUrl": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/1008/2026100801417.pdf",
+      "verifiedAt": "2026-10-09 02:59"
+    },
+    {
       "id": "hk-03277-2027-04-19-cornerstone",
       "companyId": "hk-03277",
       "date": "2027-04-19",
@@ -1599,6 +1627,6 @@
       "verifiedAt": "2026-07-22 09:11"
     }
   ],
-  "generatedAt": "2026-10-08T02:44:45.769Z",
+  "generatedAt": "2026-10-09T02:59:14.470Z",
   "note": "Automated SEC/HKEX discovery with strict publish-only-when-parseable validation."
 }
