@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-26T00:12:57.518Z",
+  "generatedAt": "2026-10-27T01:26:25.571Z",
   "timezone": "Asia/Shanghai",
   "coverage": {
     "from": "2026-10-01",
@@ -24,7 +24,7 @@
       "status": "官方日程已核验",
       "source": "Federal Reserve Board",
       "sourceUrl": "https://www.federalreserve.gov/newsevents/2026-october.htm",
-      "verifiedAt": "2026-10-26T00:12:17.087Z"
+      "verifiedAt": "2026-10-27T01:25:47.832Z"
     },
     {
       "id": "earnings-ASML-2026-10-14",
@@ -37,11 +37,11 @@
       "companyName": "ASML Holding N.V.",
       "fiscalQuarter": "Sep/2026",
       "epsForecast": "$12.47",
-      "marketCap": "$601,459,650,000",
+      "marketCap": "$605,799,510,000",
       "status": "Nasdaq 日历已收录",
       "source": "Nasdaq Earnings Calendar",
       "sourceUrl": "https://www.nasdaq.com/market-activity/stocks/asml/earnings",
-      "verifiedAt": "2026-10-26T00:12:21.020Z"
+      "verifiedAt": "2026-10-27T01:25:52.820Z"
     },
     {
       "id": "fed-2026-10-14-beige-book",
@@ -52,7 +52,7 @@
       "status": "官方日程已核验",
       "source": "Federal Reserve Board",
       "sourceUrl": "https://www.federalreserve.gov/newsevents/2026-october.htm",
-      "verifiedAt": "2026-10-26T00:12:17.087Z"
+      "verifiedAt": "2026-10-27T01:25:47.832Z"
     },
     {
       "id": "earnings-TSM-2026-10-15",
@@ -65,11 +65,11 @@
       "companyName": "Taiwan Semiconductor Manufacturing Company Ltd.",
       "fiscalQuarter": "Sep/2026",
       "epsForecast": "$4.45",
-      "marketCap": "$2,138,655,290,000",
+      "marketCap": "$2,170,604,220,000",
       "status": "Nasdaq 日历已收录",
       "source": "Nasdaq Earnings Calendar",
       "sourceUrl": "https://www.nasdaq.com/market-activity/stocks/tsm/earnings",
-      "verifiedAt": "2026-10-26T00:12:24.112Z"
+      "verifiedAt": "2026-10-27T01:25:54.822Z"
     },
     {
       "id": "fed-2026-10-16-g-17-industrial-production-and-capacity-utilization",
@@ -80,7 +80,7 @@
       "status": "官方日程已核验",
       "source": "Federal Reserve Board",
       "sourceUrl": "https://www.federalreserve.gov/newsevents/2026-october.htm",
-      "verifiedAt": "2026-10-26T00:12:17.087Z"
+      "verifiedAt": "2026-10-27T01:25:47.832Z"
     },
     {
       "id": "earnings-NFLX-2026-10-20",
@@ -93,11 +93,11 @@
       "companyName": "Netflix, Inc.",
       "fiscalQuarter": "Sep/2026",
       "epsForecast": "$0.82",
-      "marketCap": "$275,329,155,000",
+      "marketCap": "$270,401,569,000",
       "status": "Nasdaq 日历已收录",
       "source": "Nasdaq Earnings Calendar",
       "sourceUrl": "https://www.nasdaq.com/market-activity/stocks/nflx/earnings",
-      "verifiedAt": "2026-10-26T00:12:25.051Z"
+      "verifiedAt": "2026-10-27T01:25:56.822Z"
     },
     {
       "id": "earnings-META-2026-10-21",
@@ -110,11 +110,11 @@
       "companyName": "Meta Platforms, Inc.",
       "fiscalQuarter": "Sep/2026",
       "epsForecast": "$6.52",
-      "marketCap": "$1,658,617,200,000",
+      "marketCap": "$1,642,691,690,000",
       "status": "Nasdaq 日历已收录",
       "source": "Nasdaq Earnings Calendar",
       "sourceUrl": "https://www.nasdaq.com/market-activity/stocks/meta/earnings",
-      "verifiedAt": "2026-10-26T00:12:25.102Z"
+      "verifiedAt": "2026-10-27T01:25:54.852Z"
     },
     {
       "id": "earnings-TSLA-2026-10-21",
@@ -127,11 +127,11 @@
       "companyName": "Tesla, Inc. ",
       "fiscalQuarter": "Sep/2026",
       "epsForecast": "$0.22",
-      "marketCap": "$1,480,583,150,000",
+      "marketCap": "$1,471,295,520,000",
       "status": "Nasdaq 日历已收录",
       "source": "Nasdaq Earnings Calendar",
       "sourceUrl": "https://www.nasdaq.com/market-activity/stocks/tsla/earnings",
-      "verifiedAt": "2026-10-26T00:12:25.102Z"
+      "verifiedAt": "2026-10-27T01:25:54.852Z"
     },
     {
       "id": "earnings-SAP-2026-10-21",
@@ -144,11 +144,11 @@
       "companyName": "SAP SE",
       "fiscalQuarter": "Sep/2026",
       "epsForecast": "$2.03",
-      "marketCap": "$295,565,820,000",
+      "marketCap": "$292,556,014,000",
       "status": "Nasdaq 日历已收录",
       "source": "Nasdaq Earnings Calendar",
       "sourceUrl": "https://www.nasdaq.com/market-activity/stocks/sap/earnings",
-      "verifiedAt": "2026-10-26T00:12:25.103Z"
+      "verifiedAt": "2026-10-27T01:25:54.852Z"
     },
     {
       "id": "earnings-LRCX-2026-10-21",
@@ -161,11 +161,11 @@
       "companyName": "Lam Research Corporation",
       "fiscalQuarter": "Sep/2026",
       "epsForecast": "$2.17",
-      "marketCap": "$288,015,319,000",
+      "marketCap": "$287,434,244,000",
       "status": "Nasdaq 日历已收录",
       "source": "Nasdaq Earnings Calendar",
       "sourceUrl": "https://www.nasdaq.com/market-activity/stocks/lrcx/earnings",
-      "verifiedAt": "2026-10-26T00:12:25.103Z"
+      "verifiedAt": "2026-10-27T01:25:54.852Z"
     },
     {
       "id": "earnings-TXN-2026-10-21",
@@ -178,11 +178,11 @@
       "companyName": "Texas Instruments Incorporated",
       "fiscalQuarter": "Sep/2026",
       "epsForecast": "$2.40",
-      "marketCap": "$255,252,726,000",
+      "marketCap": "$259,992,486,000",
       "status": "Nasdaq 日历已收录",
       "source": "Nasdaq Earnings Calendar",
       "sourceUrl": "https://www.nasdaq.com/market-activity/stocks/txn/earnings",
-      "verifiedAt": "2026-10-26T00:12:25.103Z"
+      "verifiedAt": "2026-10-27T01:25:54.852Z"
     },
     {
       "id": "fed-2026-10-28-fomc-meeting",
@@ -193,7 +193,7 @@
       "status": "官方日程已核验",
       "source": "Federal Reserve Board",
       "sourceUrl": "https://www.federalreserve.gov/newsevents/2026-october.htm",
-      "verifiedAt": "2026-10-26T00:12:17.087Z"
+      "verifiedAt": "2026-10-27T01:25:47.832Z"
     },
     {
       "id": "bea-2026-10-29-gdp-advance-estimate-3rd-quarter-2026",
@@ -205,7 +205,7 @@
       "status": "官方日程已核验",
       "source": "U.S. Bureau of Economic Analysis",
       "sourceUrl": "https://www.bea.gov/news/schedule",
-      "verifiedAt": "2026-10-26T00:12:17.307Z"
+      "verifiedAt": "2026-10-27T01:25:47.899Z"
     },
     {
       "id": "bea-2026-10-29-personal-income-and-outlays-september-2026",
@@ -217,7 +217,7 @@
       "status": "官方日程已核验",
       "source": "U.S. Bureau of Economic Analysis",
       "sourceUrl": "https://www.bea.gov/news/schedule",
-      "verifiedAt": "2026-10-26T00:12:17.308Z"
+      "verifiedAt": "2026-10-27T01:25:47.899Z"
     },
     {
       "id": "earnings-GOOG-2026-10-28",
@@ -230,11 +230,11 @@
       "companyName": "Alphabet Inc.",
       "fiscalQuarter": "Sep/2026",
       "epsForecast": "$2.94",
-      "marketCap": "$3,965,210,590,000",
+      "marketCap": "$3,916,168,430,000",
       "status": "Nasdaq 日历已收录",
       "source": "Nasdaq Earnings Calendar",
       "sourceUrl": "https://www.nasdaq.com/market-activity/stocks/goog/earnings",
-      "verifiedAt": "2026-10-26T00:12:26.125Z"
+      "verifiedAt": "2026-10-27T01:25:59.938Z"
     },
     {
       "id": "earnings-GOOGL-2026-10-28",
@@ -247,11 +247,11 @@
       "companyName": "Alphabet Inc.",
       "fiscalQuarter": "Sep/2026",
       "epsForecast": "$2.94",
-      "marketCap": "$3,965,210,590,000",
+      "marketCap": "$3,916,168,430,000",
       "status": "Nasdaq 日历已收录",
       "source": "Nasdaq Earnings Calendar",
       "sourceUrl": "https://www.nasdaq.com/market-activity/stocks/googl/earnings",
-      "verifiedAt": "2026-10-26T00:12:26.125Z"
+      "verifiedAt": "2026-10-27T01:25:59.938Z"
     },
     {
       "id": "earnings-MSFT-2026-10-28",
@@ -264,11 +264,11 @@
       "companyName": "Microsoft Corporation",
       "fiscalQuarter": "Sep/2026",
       "epsForecast": "$4.71",
-      "marketCap": "$3,869,762,390,000",
+      "marketCap": "$3,895,235,180,000",
       "status": "Nasdaq 日历已收录",
       "source": "Nasdaq Earnings Calendar",
       "sourceUrl": "https://www.nasdaq.com/market-activity/stocks/msft/earnings",
-      "verifiedAt": "2026-10-26T00:12:26.125Z"
+      "verifiedAt": "2026-10-27T01:25:59.938Z"
     },
     {
       "id": "earnings-KLAC-2026-10-28",
@@ -281,11 +281,11 @@
       "companyName": "KLA Corporation ",
       "fiscalQuarter": "Sep/2026",
       "epsForecast": "$1.18",
-      "marketCap": "$192,919,110,000",
+      "marketCap": "$190,021,992,000",
       "status": "Nasdaq 日历已收录",
       "source": "Nasdaq Earnings Calendar",
       "sourceUrl": "https://www.nasdaq.com/market-activity/stocks/klac/earnings",
-      "verifiedAt": "2026-10-26T00:12:26.125Z"
+      "verifiedAt": "2026-10-27T01:25:59.938Z"
     },
     {
       "id": "earnings-NOW-2026-10-28",
@@ -298,11 +298,11 @@
       "companyName": "ServiceNow, Inc.",
       "fiscalQuarter": "Sep/2026",
       "epsForecast": "$0.56",
-      "marketCap": "$162,337,997,000",
+      "marketCap": "$164,364,632,000",
       "status": "Nasdaq 日历已收录",
       "source": "Nasdaq Earnings Calendar",
       "sourceUrl": "https://www.nasdaq.com/market-activity/stocks/now/earnings",
-      "verifiedAt": "2026-10-26T00:12:26.125Z"
+      "verifiedAt": "2026-10-27T01:25:59.938Z"
     },
     {
       "id": "earnings-AMZN-2026-10-29",
@@ -315,11 +315,11 @@
       "companyName": "Amazon.com, Inc.",
       "fiscalQuarter": "Sep/2026",
       "epsForecast": "$2.01",
-      "marketCap": "$2,700,677,220,000",
+      "marketCap": "$2,675,005,720,000",
       "status": "Nasdaq 日历已收录",
       "source": "Nasdaq Earnings Calendar",
       "sourceUrl": "https://www.nasdaq.com/market-activity/stocks/amzn/earnings",
-      "verifiedAt": "2026-10-26T00:12:31.168Z"
+      "verifiedAt": "2026-10-27T01:26:01.979Z"
     },
     {
       "id": "earnings-INTC-2026-10-29",
@@ -332,11 +332,11 @@
       "companyName": "Intel Corporation",
       "fiscalQuarter": "Sep/2026",
       "epsForecast": "$0.28",
-      "marketCap": "$451,820,585,000",
+      "marketCap": "$459,589,648,000",
       "status": "Nasdaq 日历已收录",
       "source": "Nasdaq Earnings Calendar",
       "sourceUrl": "https://www.nasdaq.com/market-activity/stocks/intc/earnings",
-      "verifiedAt": "2026-10-26T00:12:31.168Z"
+      "verifiedAt": "2026-10-27T01:26:01.979Z"
     },
     {
       "id": "earnings-AAPL-2026-11-02",
@@ -349,11 +349,11 @@
       "companyName": "Apple Inc.",
       "fiscalQuarter": "Sep/2026",
       "epsForecast": "$2",
-      "marketCap": "$5,081,985,400,000",
+      "marketCap": "$5,074,761,300,000",
       "status": "Nasdaq 日历已收录",
       "source": "Nasdaq Earnings Calendar",
       "sourceUrl": "https://www.nasdaq.com/market-activity/stocks/aapl/earnings",
-      "verifiedAt": "2026-10-26T00:12:30.167Z"
+      "verifiedAt": "2026-10-27T01:26:00.983Z"
     },
     {
       "id": "bea-2026-11-04-u-s-international-trade-in-goods-and-services-september-2026",
@@ -365,7 +365,7 @@
       "status": "官方日程已核验",
       "source": "U.S. Bureau of Economic Analysis",
       "sourceUrl": "https://www.bea.gov/news/schedule",
-      "verifiedAt": "2026-10-26T00:12:17.308Z"
+      "verifiedAt": "2026-10-27T01:25:47.899Z"
     },
     {
       "id": "earnings-AMD-2026-11-03",
@@ -378,11 +378,11 @@
       "companyName": "Advanced Micro Devices, Inc.",
       "fiscalQuarter": "Sep/2026",
       "epsForecast": "$1.68",
-      "marketCap": "$829,183,030,000",
+      "marketCap": "$843,646,760,000",
       "status": "Nasdaq 日历已收录",
       "source": "Nasdaq Earnings Calendar",
       "sourceUrl": "https://www.nasdaq.com/market-activity/stocks/amd/earnings",
-      "verifiedAt": "2026-10-26T00:12:30.191Z"
+      "verifiedAt": "2026-10-27T01:26:01.969Z"
     },
     {
       "id": "earnings-QCOM-2026-11-04",
@@ -395,11 +395,11 @@
       "companyName": "QUALCOMM Incorporated",
       "fiscalQuarter": "Sep/2026",
       "epsForecast": "$1.46",
-      "marketCap": "$181,511,930,000",
+      "marketCap": "$184,746,656,000",
       "status": "Nasdaq 日历已收录",
       "source": "Nasdaq Earnings Calendar",
       "sourceUrl": "https://www.nasdaq.com/market-activity/stocks/qcom/earnings",
-      "verifiedAt": "2026-10-26T00:12:30.213Z"
+      "verifiedAt": "2026-10-27T01:26:03.058Z"
     },
     {
       "id": "fed-2026-11-17-g-17-industrial-production-and-capacity-utilization",
@@ -410,7 +410,7 @@
       "status": "官方日程已核验",
       "source": "Federal Reserve Board",
       "sourceUrl": "https://www.federalreserve.gov/newsevents/2026-november.htm",
-      "verifiedAt": "2026-10-26T00:12:17.193Z"
+      "verifiedAt": "2026-10-27T01:25:47.924Z"
     },
     {
       "id": "bea-2026-11-18-outdoor-recreation-economic-statistics-u-s-and-states-2025",
@@ -422,7 +422,7 @@
       "status": "官方日程已核验",
       "source": "U.S. Bureau of Economic Analysis",
       "sourceUrl": "https://www.bea.gov/news/schedule",
-      "verifiedAt": "2026-10-26T00:12:17.308Z"
+      "verifiedAt": "2026-10-27T01:25:47.900Z"
     },
     {
       "id": "earnings-NVDA-2026-11-18",
@@ -435,11 +435,11 @@
       "companyName": "NVIDIA Corporation",
       "fiscalQuarter": "Oct/2026",
       "epsForecast": "$2.49",
-      "marketCap": "$5,114,261,100,000",
+      "marketCap": "$5,084,136,100,000",
       "status": "Nasdaq 日历已收录",
       "source": "Nasdaq Earnings Calendar",
       "sourceUrl": "https://www.nasdaq.com/market-activity/stocks/nvda/earnings",
-      "verifiedAt": "2026-10-26T00:12:37.226Z"
+      "verifiedAt": "2026-10-27T01:26:07.175Z"
     },
     {
       "id": "fed-2026-11-18-fomc-minutes",
@@ -450,7 +450,7 @@
       "status": "官方日程已核验",
       "source": "Federal Reserve Board",
       "sourceUrl": "https://www.federalreserve.gov/newsevents/2026-november.htm",
-      "verifiedAt": "2026-10-26T00:12:17.192Z"
+      "verifiedAt": "2026-10-27T01:25:47.924Z"
     },
     {
       "id": "bea-2026-11-20-activities-of-u-s-multinational-enterprises-2024",
@@ -462,7 +462,7 @@
       "status": "官方日程已核验",
       "source": "U.S. Bureau of Economic Analysis",
       "sourceUrl": "https://www.bea.gov/news/schedule",
-      "verifiedAt": "2026-10-26T00:12:17.308Z"
+      "verifiedAt": "2026-10-27T01:25:47.900Z"
     },
     {
       "id": "bea-2026-11-25-gdp-second-estimate-and-corporate-profits-3rd-quarter-2026",
@@ -474,7 +474,7 @@
       "status": "官方日程已核验",
       "source": "U.S. Bureau of Economic Analysis",
       "sourceUrl": "https://www.bea.gov/news/schedule",
-      "verifiedAt": "2026-10-26T00:12:17.308Z"
+      "verifiedAt": "2026-10-27T01:25:47.900Z"
     },
     {
       "id": "bea-2026-11-25-personal-income-and-outlays-october-2026",
@@ -486,7 +486,7 @@
       "status": "官方日程已核验",
       "source": "U.S. Bureau of Economic Analysis",
       "sourceUrl": "https://www.bea.gov/news/schedule",
-      "verifiedAt": "2026-10-26T00:12:17.309Z"
+      "verifiedAt": "2026-10-27T01:25:47.900Z"
     },
     {
       "id": "fed-2026-11-25-beige-book",
@@ -497,7 +497,7 @@
       "status": "官方日程已核验",
       "source": "Federal Reserve Board",
       "sourceUrl": "https://www.federalreserve.gov/newsevents/2026-november.htm",
-      "verifiedAt": "2026-10-26T00:12:17.193Z"
+      "verifiedAt": "2026-10-27T01:25:47.924Z"
     },
     {
       "id": "bea-2026-12-02-gdp-by-county-and-personal-income-by-county-2025",
@@ -509,7 +509,7 @@
       "status": "官方日程已核验",
       "source": "U.S. Bureau of Economic Analysis",
       "sourceUrl": "https://www.bea.gov/news/schedule",
-      "verifiedAt": "2026-10-26T00:12:17.309Z"
+      "verifiedAt": "2026-10-27T01:25:47.900Z"
     },
     {
       "id": "earnings-CRM-2026-12-02",
@@ -522,11 +522,11 @@
       "companyName": "Salesforce, Inc.",
       "fiscalQuarter": "Oct/2026",
       "epsForecast": "$2.41",
-      "marketCap": "$205,988,676,000",
+      "marketCap": "$204,573,114,000",
       "status": "Nasdaq 日历已收录",
       "source": "Nasdaq Earnings Calendar",
       "sourceUrl": "https://www.nasdaq.com/market-activity/stocks/crm/earnings",
-      "verifiedAt": "2026-10-26T00:12:41.288Z"
+      "verifiedAt": "2026-10-27T01:26:11.378Z"
     },
     {
       "id": "bea-2026-12-08-u-s-international-trade-in-goods-and-services-october-2026",
@@ -538,7 +538,7 @@
       "status": "官方日程已核验",
       "source": "U.S. Bureau of Economic Analysis",
       "sourceUrl": "https://www.bea.gov/news/schedule",
-      "verifiedAt": "2026-10-26T00:12:17.309Z"
+      "verifiedAt": "2026-10-27T01:25:47.900Z"
     },
     {
       "id": "earnings-ORCL-2026-12-09",
@@ -551,11 +551,11 @@
       "companyName": "Oracle Corporation",
       "fiscalQuarter": "Nov/2026",
       "epsForecast": "$1.57",
-      "marketCap": "$379,599,815,000",
+      "marketCap": "$381,474,537,000",
       "status": "Nasdaq 日历已收录",
       "source": "Nasdaq Earnings Calendar",
       "sourceUrl": "https://www.nasdaq.com/market-activity/stocks/orcl/earnings",
-      "verifiedAt": "2026-10-26T00:12:45.324Z"
+      "verifiedAt": "2026-10-27T01:26:15.431Z"
     },
     {
       "id": "earnings-ADBE-2026-12-09",
@@ -568,11 +568,11 @@
       "companyName": "Adobe Inc.",
       "fiscalQuarter": "Nov/2026",
       "epsForecast": "$5.11",
-      "marketCap": "$105,298,059,000",
+      "marketCap": "$102,678,741,000",
       "status": "Nasdaq 日历已收录",
       "source": "Nasdaq Earnings Calendar",
       "sourceUrl": "https://www.nasdaq.com/market-activity/stocks/adbe/earnings",
-      "verifiedAt": "2026-10-26T00:12:45.324Z"
+      "verifiedAt": "2026-10-27T01:26:15.431Z"
     },
     {
       "id": "fed-2026-12-9-fomc-meeting",
@@ -583,7 +583,7 @@
       "status": "官方日程已核验",
       "source": "Federal Reserve Board",
       "sourceUrl": "https://www.federalreserve.gov/newsevents/2026-december.htm",
-      "verifiedAt": "2026-10-26T00:12:17.299Z"
+      "verifiedAt": "2026-10-27T01:25:48.031Z"
     },
     {
       "id": "bea-2026-12-10-real-personal-consumption-expenditures-by-state-and-real-personal-income-by-state-2025",
@@ -595,7 +595,7 @@
       "status": "官方日程已核验",
       "source": "U.S. Bureau of Economic Analysis",
       "sourceUrl": "https://www.bea.gov/news/schedule",
-      "verifiedAt": "2026-10-26T00:12:17.309Z"
+      "verifiedAt": "2026-10-27T01:25:47.900Z"
     },
     {
       "id": "earnings-AVGO-2026-12-10",
@@ -608,11 +608,11 @@
       "companyName": "Broadcom Inc.",
       "fiscalQuarter": "Oct/2026",
       "epsForecast": "$3.45",
-      "marketCap": "$1,543,028,080,000",
+      "marketCap": "$1,535,581,220,000",
       "status": "Nasdaq 日历已收录",
       "source": "Nasdaq Earnings Calendar",
       "sourceUrl": "https://www.nasdaq.com/market-activity/stocks/avgo/earnings",
-      "verifiedAt": "2026-10-26T00:12:47.351Z"
+      "verifiedAt": "2026-10-27T01:26:17.454Z"
     },
     {
       "id": "fed-2026-12-16-g-17-industrial-production-and-capacity-utilization",
@@ -623,7 +623,7 @@
       "status": "官方日程已核验",
       "source": "Federal Reserve Board",
       "sourceUrl": "https://www.federalreserve.gov/newsevents/2026-december.htm",
-      "verifiedAt": "2026-10-26T00:12:17.299Z"
+      "verifiedAt": "2026-10-27T01:25:48.031Z"
     },
     {
       "id": "earnings-MU-2026-12-16",
@@ -636,11 +636,11 @@
       "companyName": "Micron Technology, Inc.",
       "fiscalQuarter": "Nov/2026",
       "epsForecast": "$37.93",
-      "marketCap": "$969,052,650,000",
+      "marketCap": "$992,880,430,000",
       "status": "Nasdaq 日历已收录",
       "source": "Nasdaq Earnings Calendar",
       "sourceUrl": "https://www.nasdaq.com/market-activity/stocks/mu/earnings",
-      "verifiedAt": "2026-10-26T00:12:48.356Z"
+      "verifiedAt": "2026-10-27T01:26:16.479Z"
     },
     {
       "id": "bea-2026-12-18-u-s-international-transactions-and-investment-position-3rd-quarter-2026",
@@ -652,7 +652,7 @@
       "status": "官方日程已核验",
       "source": "U.S. Bureau of Economic Analysis",
       "sourceUrl": "https://www.bea.gov/news/schedule",
-      "verifiedAt": "2026-10-26T00:12:17.309Z"
+      "verifiedAt": "2026-10-27T01:25:47.900Z"
     },
     {
       "id": "bea-2026-12-23-gdp-third-estimate-industries-corporate-profits-state-gdp-and-state-personal-income-3rd-quarter-2026",
@@ -664,7 +664,7 @@
       "status": "官方日程已核验",
       "source": "U.S. Bureau of Economic Analysis",
       "sourceUrl": "https://www.bea.gov/news/schedule",
-      "verifiedAt": "2026-10-26T00:12:17.309Z"
+      "verifiedAt": "2026-10-27T01:25:47.900Z"
     },
     {
       "id": "bea-2026-12-23-personal-income-and-outlays-november-2026",
@@ -676,7 +676,7 @@
       "status": "官方日程已核验",
       "source": "U.S. Bureau of Economic Analysis",
       "sourceUrl": "https://www.bea.gov/news/schedule",
-      "verifiedAt": "2026-10-26T00:12:17.309Z"
+      "verifiedAt": "2026-10-27T01:25:47.900Z"
     },
     {
       "id": "fed-2026-12-30-fomc-minutes",
@@ -687,7 +687,7 @@
       "status": "官方日程已核验",
       "source": "Federal Reserve Board",
       "sourceUrl": "https://www.federalreserve.gov/newsevents/2026-december.htm",
-      "verifiedAt": "2026-10-26T00:12:17.299Z"
+      "verifiedAt": "2026-10-27T01:25:48.031Z"
     }
   ]
 }
